@@ -4,13 +4,13 @@
 -- ------------------------------------------------------------------
 -- Description:
 --
-CREATE TABLE user (
+CREATE TABLE Users (
     uid int PRIMARY KEY,
     username varchar(255) NOT NULL,
     dateJoined varchar(255) NOT NULL
 )
 --
-CREATE TABLE movie (
+CREATE TABLE Movie (
     movieName varchar(255) PRIMARY KEY,
     movieLength int,
     releaseDate varchar(255),
@@ -20,20 +20,20 @@ CREATE TABLE movie (
     studioName varchar(255) FOREIGN KEY REFERENCES studio(sName)
 )
 --
-CREATE TABLE artist (
+CREATE TABLE Artist (
     aID int PRIMARY KEY,
     aName varchar(255),
     aBirthday varchar(255),
     aAddress varchar(255)
 )
 --
-CREATE TABLE studio (
+CREATE TABLE StudioCompany (
     sName varchar(255) PRIMARY KEY,
     sCEO varchar(255),
     sWebsite varchar(255),
 )
 --
-CREATE TABLE user_review (
+CREATE TABLE UserReview (
     uID int FOREIGN KEY REFERENCES user(uid),
     mName varchar(255) FOREIGN KEY REFERENCES movie(movieName),
     dateReviewed varchar(255),
@@ -41,17 +41,17 @@ CREATE TABLE user_review (
     CONSTRAINT UR PRIMARY KEY (uID, mName, dateReviewed)
 )
 --
-CREATE TABLE works_on (
+CREATE TABLE WorksOn (
     aID int FOREIGN KEY REFERENCES artist(aID),
     mName varchar(255) FOREIGN KEY REFERENCES movie(movieName)
     role vharchar(255) -- Constraint on predefined roles
 )
 --
-CREATE TABLE contract_with (
+CREATE TABLE ContractWith (
     aID int FOREIGN KEY REFERENCES artist(aID),
     sName varchar(255) FOREIGN KEY REFERENCES studio(sName),
     CONSTRAINT WO PRIMARY KEY (aID, sName)
 )
 --
-CREATE TABLE movie_genre -- Weird should this be in movie table or be multivalued and composite key
+CREATE TABLE MovieType -- Weird should this be in movie table or be multivalued and composite key
 
