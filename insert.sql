@@ -35,11 +35,11 @@ INSERT INTO Aritst VALUES (35,"Jason Blum","20 February 1969","Los Angeles, Cali
 INSERT INTO Aritst VALUES (36,"Stan Lee","28 December 1922","Los Angeles, California, USA");
 --
 --Studio_Company(StuName,StuCEO,Website)
-INSERT INTO Aritst VALUES ("Marvel Studios","Avi Arad","www.marvel.com/movies");
-INSERT INTO Aritst VALUES ("Universal Studios","Ronald Meyer","www.universalstudioshollywood.com");
-INSERT INTO Aritst VALUES ("Element Pictures","Annette Waldron",NULL);
-INSERT INTO Aritst VALUES ("Wiseau Studios","Tommy Wiseau","wiseaustudios.com");
-INSERT INTO Aritst VALUES ("Lion's Gate Studios","Peter Strauss","www.lionsgate.com");
+INSERT INTO Studio_Company VALUES ("Marvel Studios","Avi Arad","www.marvel.com/movies");
+INSERT INTO Studio_Company VALUES ("Universal Pictures","Ronald Meyer","www.universalpictures.com");
+INSERT INTO Studio_Company VALUES ("Element Pictures","Annette Waldron",NULL);
+INSERT INTO Studio_Company VALUES ("Wiseau Studios","Tommy Wiseau","wiseaustudios.com");
+INSERT INTO Studio_Company VALUES ("Lion's Gate Studios","Peter Strauss","www.lionsgate.com");
 --
 --User_Review(UID,MName,DateReviewed,Score)
 INSERT INTO User_Review(01,"Spider-Man Homecoming","5 April 2019",50);
@@ -96,3 +96,41 @@ INSERT INTO Works_On(35,"Get Out","Producer");
 INSERT INTO Works_On(16,"Ant-Man and the Wasp","Actor");
 INSERT INTO Works_On(26,"Ant-Man and the Wasp","Director");
 INSERT INTO Works_On(36,"Ant-Man and the Wasp","Producer");
+--
+--Contract_With(aID,SName)
+INSERT INTO Contract_With(11,"Marvel Studios");
+INSERT INTO Contract_With(12,"Lion's Gate Studios");
+INSERT INTO Contract_With(13,"Element Pictures");
+INSERT INTO Contract_With(14,"Wiseau Studios");
+INSERT INTO Contract_With(15,"Universal Pictures");
+INSERT INTO Contract_With(16,"Marvel Studios");
+INSERT INTO Contract_With(21,"Marvel Studios");
+INSERT INTO Contract_With(22,"Lion's Gate Studios");
+INSERT INTO Contract_With(23,"Element Pictures");
+INSERT INTO Contract_With(24,"Wiseau Studios");
+INSERT INTO Contract_With(25,"Universal Pictures");
+INSERT INTO Contract_With(26,"Marvel Studios");
+INSERT INTO Contract_With(31,"Marvel Studios");
+INSERT INTO Contract_With(32,"Lion's Gate Studios");
+INSERT INTO Contract_With(33,"Element Pictures");
+INSERT INTO Contract_With(34,"Wiseau Studios");
+INSERT INTO Contract_With(35,"Universal Pictures");
+INSERT INTO Contract_With(36,"Marvel Studios");
+--
+--MovieType(MovieName,genre)
+INSERT INTO MovieType("Spider-Man Homecoming","Action");
+INSERT INTO MovieType("Spider-Man Homecoming","Adventure");
+INSERT INTO MovieType("Spider-Man Homecoming","Sci-Fi");
+INSERT INTO MovieType("Willard","Drama");
+INSERT INTO MovieType("Willard","Horror");
+INSERT INTO MovieType("Willard","Sci-Fi");
+INSERT INTO MovieType("The Room","Drama");
+INSERT INTO MovieType("The Killing of a Sacred Deer","Drama");
+INSERT INTO MovieType("The Killing of a Sacred Deer","Mystery");
+INSERT INTO MovieType("The Killing of a Sacred Deer","Thriller");
+INSERT INTO MovieType("Get Out","Horror");
+INSERT INTO MovieType("Get Out","Mystery");
+INSERT INTO MovieType("Get Out","Thriller");
+INSERT INTO MovieType("Ant-Man and the Wasp","Action");
+INSERT INTO MovieType("Ant-Man and the Wasp","Adventure");
+INSERT INTO MovieType("Ant-Man and the Wasp","Comedy");
