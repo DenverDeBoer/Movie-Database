@@ -1,3 +1,5 @@
+--Insert Data into Tables
+--
 --User(UserID, Username, DateJoined)
 INSERT INTO Users VALUES (01,"CoJo","5 April 2019");
 INSERT INTO Users VALUES (02,"Owen","5 April 2019");
