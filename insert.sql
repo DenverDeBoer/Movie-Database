@@ -8,14 +8,22 @@ INSERT INTO Users VALUES (04,"Bambi","5 April 2019");
 INSERT INTO Users VALUES (05,"cinema.uncanned","5 April 2019");
 INSERT INTO Users VALUES (06,"Pol Pot","5 April 2019");
 --
+--Studio_Company(StuName,StuCEO,Website)
+INSERT INTO StudioCompany VALUES ('Marvel Studios','Avi Arad','www.marvel.com/movies');
+INSERT INTO StudioCompany VALUES ('Universal Pictures','Ronald Meyer','www.universalpictures.com');
+INSERT INTO StudioCompany VALUES ('Element Pictures','Annette Waldron',NULL);
+INSERT INTO StudioCompany VALUES ('Wiseau Studios','Tommy Wiseau','wiseaustudios.com');
+INSERT INTO StudioCompany VALUES ('Lion''s Gate Studios','Peter Strauss','www.lionsgate.com');
+--
 --Movie(MovieName, Movie_Length, Release_Date, Budget, Prequel, Sequel,SName)
-INSERT INTO Movie VALUES ('Spider-Man Homecoming',133,'7 July 2017',175000000,NULL,'Spider-Man Far From Home','Marvel Studios');
-INSERT INTO Movie VALUES ('Willard',100,'14 March 2003',22000000,NULL,NULL,'Lion's Gate Studios');
+INSERT INTO Movie VALUES ('Spider-Man Homecoming',133,'7 July 2017',175000000,NULL, NULL,'Marvel Studios');
+INSERT INTO Movie VALUES ('Willard',100,'14 March 2003',22000000,NULL,NULL,'Lion''s Gate Studios');
 INSERT INTO Movie VALUES ('The Room',99,'26 June 2003',6000000,NULL,NULL,'Wiseau Studios');
 INSERT INTO Movie VALUES ('The Killing of a Sacred Deer',121,'3 November 2017',2000000,NULL,NULL,'Element Pictures');
 INSERT INTO Movie VALUES ('Get Out',104,'24 February 2017',5000000,NULL,NULL,'Universal Pictures');
-INSERT INTO Movie VALUES ('Ant-Man and the Wasp',118,'6 July 2018',162000000,'Ant-Man','Captain America Civil War','Marvel Studios');
-INSERT INTO Movie VALUES ('Ant-Man',117,'17 July 2015',162000000,NULL,'Ant-Man and the Wasp','Marvel Studios');
+INSERT INTO Movie VALUES ('Ant-Man and the Wasp',118,'6 July 2018',162000000,NULL, NULL,'Marvel Studios');
+INSERT INTO Movie VALUES ('Ant-Man',117,'17 July 2015',162000000,NULL, 'Ant-Man and the Wasp','Marvel Studios');
+UPDATE Movie SET prequel = 'Ant-Man' WHERE movieName = 'Ant-Man and the Wasp';
 --
 --Artist(aID, aName, aBirthday, aAddress)
 INSERT INTO Artist VALUES (11,'Tom Holland','1 June 1996','London, UK');
@@ -36,13 +44,6 @@ INSERT INTO Aritst VALUES (33,'Drew Caffrey','13 August 1931','Santa Monica, Cal
 INSERT INTO Aritst VALUES (34,'Atilla Salih Yucer','12 February 1978','Bloemfontein, South Africa');
 INSERT INTO Aritst VALUES (35,'Jason Blum','20 February 1969','Los Angeles, California, USA');
 INSERT INTO Aritst VALUES (36,'Stan Lee','28 December 1922','Los Angeles, California, USA');
---
---Studio_Company(StuName,StuCEO,Website)
-INSERT INTO StudioCompany VALUES ('Marvel Studios','Avi Arad','www.marvel.com/movies');
-INSERT INTO StudioCompany VALUES ('Universal Pictures','Ronald Meyer','www.universalpictures.com');
-INSERT INTO StudioCompany VALUES ('Element Pictures','Annette Waldron',NULL);
-INSERT INTO StudioCompany VALUES ('Wiseau Studios','Tommy Wiseau','wiseaustudios.com');
-INSERT INTO StudioCompany VALUES ('Lion's Gate Studios','Peter Strauss','www.lionsgate.com');
 --
 --User_Review(UID,MName,DateReviewed,Score)
 INSERT INTO UserReview VALUES (01,'Spider-Man Homecoming','5 April 2019',50);
@@ -108,19 +109,19 @@ INSERT INTO WorksOn VALUES (31,'Ant-Man','Producer');
 --
 --Contract_With(aID,SName)
 INSERT INTO ContractWith VALUES (11,'Marvel Studios');
-INSERT INTO ContractWith VALUES (12,'Lion's Gate Studios');
+INSERT INTO ContractWith VALUES (12,'Lion''s Gate Studios');
 INSERT INTO ContractWith VALUES (13,'Element Pictures');
 INSERT INTO ContractWith VALUES (14,'Wiseau Studios');
 INSERT INTO ContractWith VALUES (15,'Universal Pictures');
 INSERT INTO ContractWith VALUES (16,'Marvel Studios');
 INSERT INTO ContractWith VALUES (21,'Marvel Studios');
-INSERT INTO ContractWith VALUES (22,'Lion's Gate Studios');
+INSERT INTO ContractWith VALUES (22,'Lion''s Gate Studios');
 INSERT INTO ContractWith VALUES (23,'Element Pictures');
 INSERT INTO ContractWith VALUES (24,'Wiseau Studios');
 INSERT INTO ContractWith VALUES (25,'Universal Pictures');
 INSERT INTO ContractWith VALUES (26,'Marvel Studios');
 INSERT INTO ContractWith VALUES (31,'Marvel Studios');
-INSERT INTO ContractWith VALUES (32,'Lion's Gate Studios');
+INSERT INTO ContractWith VALUES (32,'Lion''s Gate Studios');
 INSERT INTO ContractWith VALUES (33,'Element Pictures');
 INSERT INTO ContractWith VALUES (34,'Wiseau Studios');
 INSERT INTO ContractWith VALUES (35,'Universal Pictures');

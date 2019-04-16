@@ -7,38 +7,38 @@
 --
 CREATE TABLE Users (
     userID int PRIMARY KEY,
-    username varchar(255) NOT NULL,
-    dateJoined varchar(255) NOT NULL
+    username varchar(20) NOT NULL,
+    dateJoined varchar(20) NOT NULL
 );
 --
 CREATE TABLE StudioCompany (
-    sName varchar(255) PRIMARY KEY,
-    sCEO varchar(255),
-    sWebsite varchar(255),
+    sName varchar(30) PRIMARY KEY,
+    sCEO varchar(30),
+    sWebsite varchar(25),
     CONSTRAINT UNIQ UNIQUE (sName, sWebsite)
 );
 --
 CREATE TABLE Movie (
-    movieName varchar(255) PRIMARY KEY,
+    movieName varchar(50) PRIMARY KEY,
     movieLength int,
-    releaseDate varchar(255),
+    releaseDate varchar(20),
     budget int,
-    prequel varchar(255) REFERENCES Movie(movieName),
-    sequel varchar(255) REFERENCES Movie(movieName),
-    studioName varchar(255) REFERENCES StudioCompany(sName)
+    prequel varchar(50) REFERENCES Movie(movieName),
+    sequel varchar(50) REFERENCES Movie(movieName),
+    studioName varchar(30) REFERENCES StudioCompany(sName)
 );
 --
 CREATE TABLE Artist (
     aID int PRIMARY KEY,
-    aName varchar(255),
-    aBirthday varchar(255),
-    aAddress varchar(255)
+    aName varchar(30),
+    aBirthday varchar(20),
+    aAddress varchar(30)
 );
 --
 CREATE TABLE UserReview (
     userID int REFERENCES Users(userID),
-    mName varchar(255) REFERENCES Movie(movieName),
-    dateReviewed varchar(255),
+    mName varchar(30) REFERENCES Movie(movieName),
+    dateReviewed varchar(20),
     score int,
     CONSTRAINT UR PRIMARY KEY (userID, mName, dateReviewed),
     CONSTRAINT SC CHECK(score >= -50 AND score <= 50)
@@ -46,21 +46,21 @@ CREATE TABLE UserReview (
 --
 CREATE TABLE WorksOn (
     aID int REFERENCES Artist(aID),
-    mName varchar(255) REFERENCES Movie(movieName),
-    role varchar(255),
+    mName varchar(30) REFERENCES Movie(movieName),
+    role varchar(10),
     CONSTRAINT AM PRIMARY KEY (aID, mName), 
     CONSTRAINT RL CHECK(role IN ('Director', 'Actor', 'Producer'))
 );
 --
 CREATE TABLE ContractWith (
     aID int REFERENCES Artist(aID),
-    sName varchar(255) REFERENCES StudioCompany(sName),
+    sName varchar(30) REFERENCES StudioCompany(sName),
     CONSTRAINT WO PRIMARY KEY (aID, sName)
 );
 --
 CREATE TABLE MovieType (
-    movieName varchar(255) REFERENCES Movie(movieName),
-    genre varchar(255),
+    movieName varchar(50) REFERENCES Movie(movieName),
+    genre varchar(15),
     CONSTRAINT MG PRIMARY KEY (movieName, genre)
 );
 --
