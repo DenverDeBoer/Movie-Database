@@ -30,21 +30,23 @@ CREATE TABLE Artist (
 CREATE TABLE StudioCompany (
     sName varchar(255) PRIMARY KEY,
     sCEO varchar(255),
-    sWebsite varchar(255),
+    sWebsite varchar(255)
 )
 --
 CREATE TABLE UserReview (
     uID int FOREIGN KEY REFERENCES user(uid),
     mName varchar(255) FOREIGN KEY REFERENCES movie(movieName),
     dateReviewed varchar(255),
-    score int,  -- Constraint on value range
-    CONSTRAINT UR PRIMARY KEY (uID, mName, dateReviewed)
+    score int,
+    CONSTRAINT UR PRIMARY KEY (uID, mName, dateReviewed),
+    CONSTRAINT SC CHECK(score >= 1 AND score <=15)
 )
 --
 CREATE TABLE WorksOn (
     aID int FOREIGN KEY REFERENCES artist(aID),
     mName varchar(255) FOREIGN KEY REFERENCES movie(movieName)
     role vharchar(255) -- Constraint on predefined roles
+    CONSTRAINT RL CHECK(role IN ('Director', 'Actor', 'Producer', 'Writer'))
 )
 --
 CREATE TABLE ContractWith (
