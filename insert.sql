@@ -1,12 +1,12 @@
 --Insert Data into Tables
 --
 --User(UserID, Username, DateJoined)
-INSERT INTO Users VALUES (01,"CoJo","5 April 2019");
-INSERT INTO Users VALUES (02,"Owen","5 April 2019");
-INSERT INTO Users VALUES (03,"Halo Reach","5 April 2019");
-INSERT INTO Users VALUES (04,"Bambi","5 April 2019");
-INSERT INTO Users VALUES (05,"cinema.uncanned","5 April 2019");
-INSERT INTO Users VALUES (06,"Pol Pot","5 April 2019");
+INSERT INTO Users VALUES (01,'CoJo','5 April 2019');
+INSERT INTO Users VALUES (02,'Owen','5 April 2019');
+INSERT INTO Users VALUES (03,'Halo Reach','5 April 2019');
+INSERT INTO Users VALUES (04,'Bambi','5 April 2019');
+INSERT INTO Users VALUES (05,'cinema.uncanned','5 April 2019');
+INSERT INTO Users VALUES (06,'Pol Pot','5 April 2019');
 --
 --Studio_Company(StuName,StuCEO,Website)
 INSERT INTO StudioCompany VALUES ('Marvel Studios','Avi Arad','www.marvel.com/movies');
