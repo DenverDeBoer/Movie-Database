@@ -27,23 +27,23 @@ UPDATE Movie SET prequel = 'Ant-Man' WHERE movieName = 'Ant-Man and the Wasp';
 --
 --Artist(aID, aName, aBirthday, aAddress)
 INSERT INTO Artist VALUES (11,'Tom Holland','1 June 1996','London, UK');
-INSERT INTO Aritst VALUES (12,'Crispin Glover','20 April 1964','New York City, New York, USA');
-INSERT INTO Aritst VALUES (13,'Barry Keoghan','17 October 1992','Dublin, Ireland');
-INSERT INTO Aritst VALUES (14,'Greg Sestero','15 July 1978','Walnut Creek, California, USA');
-INSERT INTO Aritst VALUES (15,'Daniel Kaluuya','24 February 1989','London, UK');
-INSERT INTO Aritst VALUES (16,'Paul Rudd','6 April 1969','New Jersy, USA');
-INSERT INTO Aritst VALUES (21,'Jon Watts','28 June 1981','Fountain, Colorado, USA');
-INSERT INTO Aritst VALUES (22,'Glen Morgan','16 January 1947','San Francisco, California, USA');
-INSERT INTO Aritst VALUES (23,'Tommy Wiseau','3 October 1955','Poznan, Poland');
-INSERT INTO Aritst VALUES (24,'Yorgos Lanthimos','1 January 1973','Athens, Greece');
-INSERT INTO Aritst VALUES (25,'Jordan Peele','21 February 1979','New York City, New York, USA');
-INSERT INTO Aritst VALUES (26,'Peyton Reed','3 July 1964','Raleigh, North Carolina, USA');
-INSERT INTO Aritst VALUES (31,'Victoria Alonso','22 December 1965','Buenos Aires, Argentina');
-INSERT INTO Aritst VALUES (32,'Toby Emmerich','8 February 1963','New York City, New York, USA');
-INSERT INTO Aritst VALUES (33,'Drew Caffrey','13 August 1931','Santa Monica, California, USA');
-INSERT INTO Aritst VALUES (34,'Atilla Salih Yucer','12 February 1978','Bloemfontein, South Africa');
-INSERT INTO Aritst VALUES (35,'Jason Blum','20 February 1969','Los Angeles, California, USA');
-INSERT INTO Aritst VALUES (36,'Stan Lee','28 December 1922','Los Angeles, California, USA');
+INSERT INTO Artist VALUES (12,'Crispin Glover','20 April 1964','New York City, New York, USA');
+INSERT INTO Artist VALUES (13,'Barry Keoghan','17 October 1992','Dublin, Ireland');
+INSERT INTO Artist VALUES (14,'Greg Sestero','15 July 1978','Walnut Creek, California, USA');
+INSERT INTO Artist VALUES (15,'Daniel Kaluuya','24 February 1989','London, UK');
+INSERT INTO Artist VALUES (16,'Paul Rudd','6 April 1969','New Jersy, USA');
+INSERT INTO Artist VALUES (21,'Jon Watts','28 June 1981','Fountain, Colorado, USA');
+INSERT INTO Artist VALUES (22,'Glen Morgan','16 January 1947','San Francisco, California, USA');
+INSERT INTO Artist VALUES (23,'Tommy Wiseau','3 October 1955','Poznan, Poland');
+INSERT INTO Artist VALUES (24,'Yorgos Lanthimos','1 January 1973','Athens, Greece');
+INSERT INTO Artist VALUES (25,'Jordan Peele','21 February 1979','New York City, New York, USA');
+INSERT INTO Artist VALUES (26,'Peyton Reed','3 July 1964','Raleigh, North Carolina, USA');
+INSERT INTO Artist VALUES (31,'Victoria Alonso','22 December 1965','Buenos Aires, Argentina');
+INSERT INTO Artist VALUES (32,'Toby Emmerich','8 February 1963','New York City, New York, USA');
+INSERT INTO Artist VALUES (33,'Drew Caffrey','13 August 1931','Santa Monica, California, USA');
+INSERT INTO Artist VALUES (34,'Atilla Salih Yucer','12 February 1978','Bloemfontein, South Africa');
+INSERT INTO Artist VALUES (35,'Jason Blum','20 February 1969','Los Angeles, California, USA');
+INSERT INTO Artist VALUES (36,'Stan Lee','28 December 1922','Los Angeles, California, USA');
 --
 --User_Review(UID,MName,DateReviewed,Score)
 INSERT INTO UserReview VALUES (01,'Spider-Man Homecoming','5 April 2019',50);
