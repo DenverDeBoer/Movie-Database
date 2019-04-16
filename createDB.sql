@@ -14,7 +14,8 @@ CREATE TABLE Users (
 CREATE TABLE StudioCompany (
     sName varchar(255) PRIMARY KEY,
     sCEO varchar(255),
-    sWebsite varchar(255)
+    sWebsite varchar(255),
+    CONSTRAINT UNIQ UNIQUE (sName, sWebsite)
 );
 --
 CREATE TABLE Movie (
