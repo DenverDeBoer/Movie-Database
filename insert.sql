@@ -96,7 +96,7 @@ INSERT INTO WorksOn VALUES (14,'The Room','Actor');
 INSERT INTO WorksOn VALUES (24,'The Room','Director');
 INSERT INTO WorksOn VALUES (34,'The Room','Producer');
 INSERT INTO WorksOn VALUES (15,'Get Out','Actor');
-INSERT INTO WorksOn VALUES (25,'Get Out','Dirctor');
+INSERT INTO WorksOn VALUES (25,'Get Out','Director');
 INSERT INTO WorksOn VALUES (35,'Get Out','Producer');
 INSERT INTO WorksOn VALUES (16,'Ant-Man and the Wasp','Actor');
 INSERT INTO WorksOn VALUES (26,'Ant-Man and the Wasp','Director');
