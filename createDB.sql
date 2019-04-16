@@ -15,9 +15,9 @@ CREATE TABLE Movie (
     movieLength int,
     releaseDate varchar(255),
     budget int,
-    prequel varchar(255) FOREIGN KEY REFERENCES movie(movieName),
-    sequel varchar(255) FOREIGN KEY REFERENCES movie(movieName),
-    studioName varchar(255) FOREIGN KEY REFERENCES studio(sName)
+    prequel varchar(255) FOREIGN KEY REFERENCES Movie(movieName),
+    sequel varchar(255) FOREIGN KEY REFERENCES Movie(movieName),
+    studioName varchar(255) FOREIGN KEY REFERENCES Studio(sName)
 )
 --
 CREATE TABLE Artist (
@@ -34,8 +34,8 @@ CREATE TABLE StudioCompany (
 )
 --
 CREATE TABLE UserReview (
-    uID int FOREIGN KEY REFERENCES user(uid),
-    mName varchar(255) FOREIGN KEY REFERENCES movie(movieName),
+    uID int FOREIGN KEY REFERENCES User(uid),
+    mName varchar(255) FOREIGN KEY REFERENCES Movie(movieName),
     dateReviewed varchar(255),
     score int,
     CONSTRAINT UR PRIMARY KEY (uID, mName, dateReviewed),
@@ -43,17 +43,21 @@ CREATE TABLE UserReview (
 )
 --
 CREATE TABLE WorksOn (
-    aID int FOREIGN KEY REFERENCES artist(aID),
-    mName varchar(255) FOREIGN KEY REFERENCES movie(movieName)
-    role vharchar(255) -- Constraint on predefined roles
-    CONSTRAINT RL CHECK(role IN ('Director', 'Actor', 'Producer', 'Writer'))
+    aID int FOREIGN KEY REFERENCES Artist(aID),
+    mName varchar(255) FOREIGN KEY REFERENCES Movie(movieName)
+    role vharchar(255)
+    CONSTRAINT RL CHECK(role IN ('Director', 'Actor', 'Producer'))
 )
 --
 CREATE TABLE ContractWith (
-    aID int FOREIGN KEY REFERENCES artist(aID),
-    sName varchar(255) FOREIGN KEY REFERENCES studio(sName),
+    aID int FOREIGN KEY REFERENCES Artist(aID),
+    sName varchar(255) FOREIGN KEY REFERENCES StudioCompany(sName),
     CONSTRAINT WO PRIMARY KEY (aID, sName)
 )
 --
-CREATE TABLE MovieType -- Weird should this be in movie table or be multivalued and composite key
+CREATE TABLE MovieType (
+    movieName varchar(255) FOREIGN KEY REFERENCES Movie(movieName),
+    genre varchar(255),
+    CONSTRAINT MG PRIMARY KEY (movieName, genre)
+)
 
