@@ -14,7 +14,8 @@ INSERT INTO Movie VALUES ("Willard",100,"14 March 2003",22000000,NULL,NULL,"Lion
 INSERT INTO Movie VALUES ("The Room",99,"26 June 2003",6000000,NULL,NULL,"Wiseau Studios");
 INSERT INTO Movie VALUES ("The Killing of a Sacred Deer",121,"3 November 2017",2000000,NULL,NULL,"Element Pictures");
 INSERT INTO Movie VALUES ("Get Out",104,"24 February 2017",5000000,NULL,NULL,"Universal Pictures");
-INSERT INTO Movie VALUES ("Ant-Man and the Wasp",118,"6 July 2018",162000000,"Ant-Man","Captain Marvel","Marvel Studios");
+INSERT INTO Movie VALUES ("Ant-Man and the Wasp",118,"6 July 2018",162000000,"Ant-Man","Captain America Civil War","Marvel Studios");
+INSERT INTO Movie VALUES ("Ant-Man",117,"17 July 2015",162000000,NULL,"Ant-Man and the Wasp","Marvel Studios");
 --
 --Artist(aID, aName, aBirthday, aAddress)
 INSERT INTO Artist VALUES (11,"Tom Holland","1 June 1996","London, UK");
@@ -83,6 +84,7 @@ INSERT INTO UserReview(06,"Ant-Man and the Wasp","5 April 2019",44);
 INSERT INTO WorksOn(11,"Spider-Man Homecoming","Actor");
 INSERT INTO WorksOn(21,"Spider-Man Homecoming","Director");
 INSERT INTO WorksOn(31,"Spider-Man Homecoming","Producer");
+INSERT INTO WorksOn(36,"Spider-Man Homecoming","Actor");
 INSERT INTO WorksOn(12,"Willard","Actor");
 INSERT INTO WorksOn(22,"Willard","Director");
 INSERT INTO WorksOn(32,"Willard","Producer");
@@ -98,6 +100,11 @@ INSERT INTO WorksOn(35,"Get Out","Producer");
 INSERT INTO WorksOn(16,"Ant-Man and the Wasp","Actor");
 INSERT INTO WorksOn(26,"Ant-Man and the Wasp","Director");
 INSERT INTO WorksOn(36,"Ant-Man and the Wasp","Producer");
+INSERT INTO WorksOn(31,"Ant-Man and the Wasp","Producer");
+INSERT INTO WorksOn(16,"Ant-Man","Actor");
+INSERT INTO WorksOn(26,"Ant-Man","Director");
+INSERT INTO WorksOn(36,"Ant-Man","Producer");
+INSERT INTO WorksOn(31,"Ant-Man","Producer");
 --
 --Contract_With(aID,SName)
 INSERT INTO ContractWith(11,"Marvel Studios");
@@ -136,3 +143,7 @@ INSERT INTO MovieType("Get Out","Thriller");
 INSERT INTO MovieType("Ant-Man and the Wasp","Action");
 INSERT INTO MovieType("Ant-Man and the Wasp","Adventure");
 INSERT INTO MovieType("Ant-Man and the Wasp","Comedy");
+INSERT INTO MovieType("Ant-Man","Action");
+INSERT INTO MovieType("Ant-Man","Adventure");
+INSERT INTO MovieType("Ant-Man","Comedy");
+INSERT INTO MovieType("Ant-Man","Sci-Fi");
