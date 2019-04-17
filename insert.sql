@@ -44,7 +44,7 @@ INSERT INTO Artist VALUES (33,'Drew Caffrey','13 August 1931','Santa Monica, Cal
 INSERT INTO Artist VALUES (34,'Atilla Salih Yucer','12 February 1978','Bloemfontein, South Africa');
 INSERT INTO Artist VALUES (35,'Jason Blum','20 February 1969','Los Angeles, California, USA');
 INSERT INTO Artist VALUES (36,'Stan Lee','28 December 1922','Los Angeles, California, USA');
-INSERT INTO Artist VALUES (37,'Nicolas Cage','7 January 1964','Long Beach, California, USA');
+INSERT INTO Artist VALUES (69,'Nicolas Cage','7 January 1964','Long Beach, California, USA');
 --
 --User_Review(UID,MName,DateReviewed,Score)
 INSERT INTO UserReview VALUES (01,'Spider-Man Homecoming','5 April 2019',50);

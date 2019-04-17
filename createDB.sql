@@ -14,8 +14,7 @@ CREATE TABLE Users (
 CREATE TABLE StudioCompany (
     sName varchar(30) PRIMARY KEY,
     sCEO varchar(30),
-    sWebsite varchar(25),
-    CONSTRAINT UNIQ UNIQUE (sName, sWebsite)
+    sWebsite varchar(25)
 );
 --
 CREATE TABLE Movie (
@@ -25,7 +24,8 @@ CREATE TABLE Movie (
     budget int,
     prequel varchar(50) REFERENCES Movie(movieName),
     sequel varchar(50) REFERENCES Movie(movieName),
-    studioName varchar(30) REFERENCES StudioCompany(sName)
+    studioName varchar(30) REFERENCES StudioCompany(sName),
+    CONSTRAINT UNIQ UNIQUE (prequel, sequel)
 );
 --
 CREATE TABLE Artist (
