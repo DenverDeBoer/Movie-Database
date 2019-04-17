@@ -25,7 +25,7 @@ CREATE TABLE Movie (
     prequel varchar(50) REFERENCES Movie(movieName),
     sequel varchar(50) REFERENCES Movie(movieName),
     studioName varchar(30) REFERENCES StudioCompany(sName),
-    CONSTRAINT UNIQ UNIQUE (prequel, sequel)
+    CONSTRAINT UNIQ CHECK (prequel != sequel)
 );
 --
 CREATE TABLE Artist (
