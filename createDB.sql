@@ -18,7 +18,7 @@ CREATE TABLE StudioCompany (
 );
 --
 CREATE TABLE Movie (
-    movieName varchar(50) PRIMARY KEY,
+    movieName varchar(30) PRIMARY KEY,
     movieLength int,
     releaseDate varchar(20),
     budget int,
