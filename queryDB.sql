@@ -46,3 +46,24 @@ SELECT	 A.aName, C.sName
 FROM	 Artist A LEFT JOIN ContractWith C
 ON	 A.aID = C.aID
 ORDER BY C.sName;
+--
+--
+--
+/* Query #4
+   For every artist who works on every Marvel movie, display
+   the artist's ID, Name, and the studio's name
+
+   Complete #3, #6, #7, #8 query type needed.
+*/
+SELECT A.aID, A.aName, C.SName
+FROM Artist A, ContractWith C
+Where A.aID = C.aID AND
+      NOT EXISTS((SELECT M.MovieName
+		  FROM Movie M
+		  WHERE M.studioName LIKE 'Marvel Studios')
+		MINUS
+		(SELECT M.MovieName
+		 FROM Movie M, WorksOn W
+		 WHERE A.aID = W.aID AND
+		 W.MName = M.MovieName AND
+		 M.studioName LIKE 'Marvel Studios'));
